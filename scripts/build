@@ -1,0 +1,8 @@
+#!/bin/bash
+
+lein clean
+lein cljsbuild once min
+rm -rf build/
+mkdir -p build
+cp -r resources/public/* build/
+lein clean
